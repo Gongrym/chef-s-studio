@@ -10,15 +10,12 @@
 
   <body>
     <div class="wrap">
-      <!-- 상단 -->
+      <!-- 상단 헤더 -->
       <header>
         <div class="inner">
-          <!-- 로고 -->
           <h1><a href="#">Chef's studio</a></h1>
 
-          <!-- 네비게이션 -->
           <nav class="nav" aria-label="메인 메뉴">
-            <!-- 메뉴 링크 -->
             <div class="menu" id="main-menu">
               <a href="#">쿠킹 클래스</a>
               <a href="#">소개</a>
@@ -41,7 +38,7 @@
               </svg>
             </a>
 
-            <!-- 햄버거 버튼 -->
+            <!-- 모바일 메뉴 버튼 -->
             <button
               type="button"
               class="menu-btn"
@@ -67,11 +64,149 @@
         </div>
       </header>
 
-      <!-- 메인 -->
-      <main></main>
+      <!-- 메인 콘텐츠 -->
+      <main class="main-content">
+        <!-- 소개 영역 -->
+        <section class="intro">
+          <div class="intro-text">
+            <h2>안녕하세요! 🧛‍♂️</h2>
+            <p>최고의 요리 전문가와 함께 배우는 쿠킹 클래스를 만나보세요.</p>
+          </div>
+
+          <!-- 필터 아이콘 -->
+          <button type="button" class="filter-btn" aria-label="음식 필터">
+            <img src="images/Vector (1).png" alt="" />
+          </button>
+        </section>
+
+        <!-- 음식 카드 목록 -->
+        <section class="food-section" aria-label="음식 목록">
+          <div class="food-grid">
+            <!-- 카드 1: 도가니탕 -->
+            <article class="food-card">
+              <div class="food-image">
+                <img src="food/images.jfif" alt="" />
+              </div>
+              <div class="food-info">
+                <h3>도가니탕</h3>
+                <span class="food-country">🇰🇷 대한민국</span>
+                <p>
+                  소의 도가니와 뼈를 오랫동안 끓여 깊고 진한 국물을 낸 한국의
+                  전통 음식.
+                </p>
+              </div>
+            </article>
+
+            <!-- 카드 2: 츠케멘 -->
+            <article class="food-card">
+              <div class="food-image">
+                <img src="food/images (1).jfif" alt="" />
+              </div>
+              <div class="food-info">
+                <h3>츠케멘</h3>
+                <span class="food-country">🇯🇵 일본</span>
+                <p>
+                  면과 진한 국물을 따로 담아 먹는 일본식 라멘으로, 쫄깃한 면과
+                  농축된 육수의 조화가 특징.
+                </p>
+              </div>
+            </article>
+
+            <!-- 카드 3: 시카고 피자 -->
+            <article class="food-card">
+              <div class="food-image">
+                <img src="food/images (2).jfif" alt="" />
+              </div>
+              <div class="food-info">
+                <h3>시카고 피자</h3>
+                <span class="food-country">🇺🇸 미국</span>
+                <p>
+                  깊은 팬에 두꺼운 도우를 깔고 치즈와 토핑, 토마토소스를
+                  풍성하게 채워 구워낸 피자.
+                </p>
+              </div>
+            </article>
+
+            <!-- 카드 4: 뵈프 부르기뇽 -->
+            <article class="food-card">
+              <div class="food-image">
+                <img src="food/images (3).jfif" alt="" />
+              </div>
+              <div class="food-info">
+                <h3>뵈프 부르기뇽</h3>
+                <span class="food-country">🇫🇷 프랑스</span>
+                <p>
+                  소고기를 레드와인과 채소, 허브와 함께 천천히 익혀 부드러운
+                  식감과 깊은 풍미를 살린 프랑스식 스튜.
+                </p>
+              </div>
+            </article>
+
+            <!-- 카드 5: 분짜 -->
+            <article class="food-card">
+              <div class="food-image">
+                <img src="food/images (4).jfif" alt="" />
+              </div>
+              <div class="food-info">
+                <h3>분짜</h3>
+                <span class="food-country">🇻🇳 베트남</span>
+                <p>
+                  숯불에 구운 돼지고기와 쌀국수 면을 새콤달콤한 소스에 곁들여
+                  먹는 베트남의 대표 음식.
+                </p>
+              </div>
+            </article>
+
+            <!-- 카드 6: 물회 -->
+            <article class="food-card">
+              <div class="food-image">
+                <img src="food/images (5).jfif" alt="" />
+              </div>
+              <div class="food-info">
+                <h3>물회</h3>
+                <span class="food-country">🇰🇷 대한민국</span>
+                <p>
+                  신선한 생선과 채소를 차갑고 새콤매콤한 양념 국물에 말아 먹는
+                  한국의 별미.
+                </p>
+              </div>
+            </article>
+
+            <!-- 카드 7: 김치찌개 -->
+            <article class="food-card">
+              <div class="food-image">
+                <img src="food/images (6).jfif" alt="" />
+              </div>
+              <div class="food-info">
+                <h3>김치찌개</h3>
+                <span class="food-country">🇰🇷 대한민국</span>
+                <p>
+                  잘 익은 김치에 돼지고기와 두부 등을 넣고 끓여 칼칼하고 깊은
+                  맛을 내는 한국의 대표적인 찌개.
+                </p>
+              </div>
+            </article>
+
+            <!-- 카드 8: 마파두부 -->
+            <article class="food-card">
+              <div class="food-image">
+                <img src="food/images (7).jfif" alt="" />
+              </div>
+              <div class="food-info">
+                <h3>마파두부</h3>
+                <span class="food-country">🇨🇳 중국 · 쓰촨</span>
+                <p>
+                  부드러운 두부와 다진 고기를 매콤한 고추와 향신료 소스에 볶아
+                  만드는 쓰촨 지방의 요리.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
     </div>
 
-    <!-- 메뉴 열기/닫기 -->
+    <!-- 모바일 메뉴 열기/닫기 -->
     <script>
       const nav = document.querySelector(".nav");
       const menuBtn = document.querySelector(".menu-btn");

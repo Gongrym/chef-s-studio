@@ -22,7 +22,7 @@
     display: flex;
   }
 
-  /* 메뉴 링크를 헤더 아래로 이동 */
+  /* 메뉴를 헤더 아래로 이동 */
   .menu {
     display: none;
     position: absolute;
@@ -39,13 +39,45 @@
     border-bottom: 1px solid #e5e5e5;
   }
 
-  /* 버튼을 누르면 메뉴 표시 */
   .nav.open .menu {
     display: flex;
   }
 
   .menu a {
     padding: 16px 24px;
+  }
+
+  /* 메인 영역 */
+  .main-content {
+    width: auto;
+    margin: 0 24px;
+    padding: 36px 0 60px;
+  }
+
+  .intro {
+    margin-bottom: 28px;
+  }
+
+  .intro-text h2 {
+    font-size: 28px;
+  }
+
+  .intro-text p {
+    font-size: 15px;
+  }
+
+  /* 태블릿: 2열 */
+  .food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+
+  .food-info {
+    padding: 16px;
+  }
+
+  .food-info h3 {
+    font-size: 17px;
   }
 }
 
@@ -69,5 +101,55 @@
 
   .menu a {
     padding: 14px 16px;
+  }
+
+  /* 메인 영역 */
+  .main-content {
+    margin: 0 16px;
+    padding: 28px 0 48px;
+  }
+
+  .intro {
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .intro-text h2 {
+    margin-bottom: 8px;
+    font-size: 24px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .filter-btn {
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+  }
+
+  /* 모바일: 1열 */
+  .food-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .food-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .food-info {
+    padding: 16px 18px 20px;
+  }
+
+  .food-info h3 {
+    font-size: 18px;
+  }
+
+  .food-info p {
+    font-size: 14px;
   }
 }

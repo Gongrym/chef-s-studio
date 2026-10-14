@@ -14,11 +14,22 @@ a {
 body {
   font-family: "Inter", sans-serif;
   color: #222;
+  background: #fff;
 }
 
-/* header */
+button {
+  font: inherit;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ===== 헤더 ===== */
 header {
   position: relative;
+  z-index: 20;
   height: 80px;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
@@ -41,7 +52,6 @@ header h1 {
   letter-spacing: -0.02em;
 }
 
-/* nav */
 .nav {
   display: flex;
   align-items: center;
@@ -63,22 +73,168 @@ header h1 {
   opacity: 0.6;
 }
 
-/* 검색 버튼 */
 .search-btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* 햄버거 버튼: 기본 PC에서는 숨김 */
 .menu-btn {
   display: none;
   align-items: center;
   justify-content: center;
-
   padding: 0;
   background: none;
   border: 0;
   color: inherit;
   cursor: pointer;
+}
+
+/* ===== 메인 영역 ===== */
+.main-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 52px 0 80px;
+}
+
+/* 소개 영역 */
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.intro-text h2 {
+  margin-bottom: 12px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.intro-text p {
+  color: #777;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* 필터 버튼 */
+.filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #f7f7f7;
+  border-color: #ccc;
+}
+
+.filter-btn img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ===== 음식 카드 목록 ===== */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 24px;
+}
+
+/* 카드 */
+.food-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #ededed;
+  border-radius: 16px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgb(0 0 0 / 7%);
+}
+
+/* 사진이 들어갈 빈 공간 */
+/* .food-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #f2f2f2;
+  overflow: hidden;
+} */
+
+/* 음식 이름, 국가, 소개 */
+.food-info {
+  padding: 18px 18px 22px;
+}
+
+.food-info h3 {
+  min-height: 25px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.food-country {
+  display: inline-block;
+  min-height: 22px;
+  margin-bottom: 10px;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.food-info p {
+  min-height: 44px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* 음식 사진을 카드 영역에 꽉 맞추기 */
+.food-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+
+.food-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 음식 이름 */
+.food-info h3 {
+  color: #a6533c;
+  font-weight: 700;
 }

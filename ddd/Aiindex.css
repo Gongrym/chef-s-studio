@@ -204,9 +204,10 @@ header h1 {
   display: inline-block;
   min-height: 22px;
   margin-bottom: 10px;
-  color: #888;
+  color: #575757;
   font-size: 13px;
   line-height: 1.6;
+  font-weight: bold;
 }
 
 .food-info p {

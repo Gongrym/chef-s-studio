@@ -31,7 +31,7 @@ header {
   position: relative;
   z-index: 20;
   height: 80px;
-  background: #fff;
+  background: #ec9f9f;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -164,7 +164,7 @@ header h1 {
 .food-card {
   min-width: 0;
   overflow: hidden;
-  background: #fff;
+  background: #f0e6b2;
   border: 1px solid #ededed;
   border-radius: 16px;
 

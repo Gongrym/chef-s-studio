@@ -1,0 +1,73 @@
+/* ===== 태블릿: 768px 이하 ===== */
+@media (max-width: 768px) {
+  header {
+    height: 64px;
+  }
+
+  header .inner {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  /* 햄버거 버튼 표시 */
+  .menu-btn {
+    display: flex;
+  }
+
+  /* 메뉴 링크를 헤더 아래로 이동 */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  /* 버튼을 누르면 메뉴 표시 */
+  .nav.open .menu {
+    display: flex;
+  }
+
+  .menu a {
+    padding: 16px 24px;
+  }
+}
+
+/* ===== 모바일: 390px 이하 ===== */
+@media (max-width: 390px) {
+  header {
+    height: 56px;
+  }
+
+  header .inner {
+    padding: 0 16px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  .nav {
+    gap: 16px;
+  }
+
+  .menu a {
+    padding: 14px 16px;
+  }
+}

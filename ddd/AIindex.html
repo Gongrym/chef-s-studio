@@ -3,230 +3,152 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chef's studio</title>
-    <!-- 웹 폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>Chef's Studio</title>
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="Aiindex.css" />
     <link rel="stylesheet" href="responsive.css" />
-    <link rel="stylesheet" href="Aiindex.css" />
-    <link rel="stylesheet" href="responsive.css" />
+
+    <script src="menu.js" defer></script>
   </head>
 
   <body>
-    <div class="wrap">
-      <!-- 상단 헤더 -->
-      <header>
-        <div class="inner">
-          <h1><a href="#">Chef's studio</a></h1>
+    <header class="header">
+      <div class="header-inner">
+        <a href="#" class="logo">Chef's studio</a>
 
-          <nav class="nav" aria-label="메인 메뉴">
-            <div class="menu" id="main-menu">
-              <a href="#">쿠킹 클래스</a>
-              <a href="#">소개</a>
-              <a href="#">로그인</a>
-            </div>
-
-            <!-- 검색 버튼 -->
-            <a href="#" class="search-btn" aria-label="검색">
-              <svg
-                viewBox="0 0 24 24"
-                width="22"
-                height="22"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-              >
-                <circle cx="10.5" cy="10.5" r="6.5" />
-                <line x1="15.5" y1="15.5" x2="21" y2="21" />
-              </svg>
-            </a>
-
-            <!-- 모바일 메뉴 버튼 -->
-            <button
-              type="button"
-              class="menu-btn"
-              aria-label="메뉴 열기"
-              aria-controls="main-menu"
-              aria-expanded="false"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                width="22"
-                height="22"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-              >
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
-              </svg>
-            </button>
-          </nav>
-        </div>
-      </header>
-
-      <!-- 메인 콘텐츠 -->
-      <main class="main-content">
-        <!-- 소개 영역 -->
-        <section class="intro">
-          <div class="intro-text">
-            <h2>안녕하세요! 🧛‍♂️</h2>
-            <p>최고의 요리 전문가와 함께 배우는 쿠킹 클래스를 만나보세요.</p>
+        <nav class="nav" aria-label="메인 메뉴">
+          <div class="menu" id="main-menu">
+            <a href="#">쿠킹 클래스</a>
+            <a href="#">소개</a>
+            <a href="#">로그인</a>
           </div>
 
-          <!-- 필터 아이콘 -->
-          <button type="button" class="filter-btn" aria-label="음식 필터">
+          <button type="button" class="search-btn" aria-label="검색">
             <img src="images/Vector (1).png" alt="" />
           </button>
-        </section>
 
-        <!-- 음식 카드 목록 -->
-        <section class="food-section" aria-label="음식 목록">
-          <div class="food-grid">
-            <!-- 카드 1: 도가니탕 -->
-            <article class="food-card">
-              <div class="food-image">
-                <img src="food/images.jfif" alt="" />
-              </div>
-              <div class="food-info">
-                <h3>도가니탕</h3>
-                <span class="food-country">🇰🇷 대한민국</span>
-                <p>
-                  소의 도가니와 뼈를 오랫동안 끓여 깊고 진한 국물을 낸 한국의
-                  전통 음식.
-                </p>
-              </div>
-            </article>
+          <button
+            type="button"
+            class="menu-btn"
+            aria-label="메뉴 열기"
+            aria-controls="main-menu"
+            aria-expanded="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </header>
 
-            <!-- 카드 2: 츠케멘 -->
-            <article class="food-card">
-              <div class="food-image">
-                <img src="food/images (1).jfif" alt="" />
-              </div>
-              <div class="food-info">
-                <h3>츠케멘</h3>
-                <span class="food-country">🇯🇵 일본</span>
-                <p>
-                  면과 진한 국물을 따로 담아 먹는 일본식 라멘으로, 쫄깃한 면과
-                  농축된 육수의 조화가 특징.
-                </p>
-              </div>
-            </article>
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <p class="eyebrow">COOKING, MADE SIMPLE</p>
+          <h1>요리가 즐거워지는 순간</h1>
+          <p class="hero-description">
+            좋은 재료와 즐거운 경험으로 나만의 요리를 만들어 보세요.
+          </p>
+          <a href="#classes" class="hero-link">클래스 둘러보기</a>
+        </div>
+      </section>
 
-            <!-- 카드 3: 시카고 피자 -->
-            <article class="food-card">
-              <div class="food-image">
-                <img src="food/images (2).jfif" alt="" />
-              </div>
-              <div class="food-info">
-                <h3>시카고 피자</h3>
-                <span class="food-country">🇺🇸 미국</span>
-                <p>
-                  깊은 팬에 두꺼운 도우를 깔고 치즈와 토핑, 토마토소스를
-                  풍성하게 채워 구워낸 피자.
-                </p>
-              </div>
-            </article>
+      <section class="classes" id="classes">
+        <div class="section-heading">
+          <p class="eyebrow">OUR CLASSES</p>
+          <h2>오늘은 어떤 요리를 해볼까요?</h2>
+          <p>다양한 요리를 직접 배우고 경험해 보세요.</p>
+        </div>
 
-            <!-- 카드 4: 뵈프 부르기뇽 -->
-            <article class="food-card">
-              <div class="food-image">
-                <img src="food/images (3).jfif" alt="" />
-              </div>
-              <div class="food-info">
-                <h3>뵈프 부르기뇽</h3>
-                <span class="food-country">🇫🇷 프랑스</span>
-                <p>
-                  소고기를 레드와인과 채소, 허브와 함께 천천히 익혀 부드러운
-                  식감과 깊은 풍미를 살린 프랑스식 스튜.
-                </p>
-              </div>
-            </article>
+        <div class="class-grid">
+          <article class="food-card">
+            <img src="food/images.jfif" alt="쿠킹 클래스 요리 1" />
+            <div class="food-info">
+              <h3>오늘의 쿠킹 클래스</h3>
+              <p>새로운 요리에 도전해 보세요.</p>
+            </div>
+          </article>
 
-            <!-- 카드 5: 분짜 -->
-            <article class="food-card">
-              <div class="food-image">
-                <img src="food/images (4).jfif" alt="" />
-              </div>
-              <div class="food-info">
-                <h3>분짜</h3>
-                <span class="food-country">🇻🇳 베트남</span>
-                <p>
-                  숯불에 구운 돼지고기와 쌀국수 면을 새콤달콤한 소스에 곁들여
-                  먹는 베트남의 대표 음식.
-                </p>
-              </div>
-            </article>
+          <article class="food-card">
+            <img src="food/images (1).jfif" alt="쿠킹 클래스 요리 2" />
+            <div class="food-info">
+              <h3>감각적인 한 끼</h3>
+              <p>재료의 매력을 살리는 요리.</p>
+            </div>
+          </article>
 
-            <!-- 카드 6: 물회 -->
-            <article class="food-card">
-              <div class="food-image">
-                <img src="food/images (5).jfif" alt="" />
-              </div>
-              <div class="food-info">
-                <h3>물회</h3>
-                <span class="food-country">🇰🇷 대한민국</span>
-                <p>
-                  신선한 생선과 채소를 차갑고 새콤매콤한 양념 국물에 말아 먹는
-                  한국의 별미.
-                </p>
-              </div>
-            </article>
+          <article class="food-card">
+            <img src="food/images (2).jfif" alt="쿠킹 클래스 요리 3" />
+            <div class="food-info">
+              <h3>나만의 레시피</h3>
+              <p>기초부터 차근차근 배워 보세요.</p>
+            </div>
+          </article>
 
-            <!-- 카드 7: 김치찌개 -->
-            <article class="food-card">
-              <div class="food-image">
-                <img src="food/images (6).jfif" alt="" />
-              </div>
-              <div class="food-info">
-                <h3>김치찌개</h3>
-                <span class="food-country">🇰🇷 대한민국</span>
-                <p>
-                  잘 익은 김치에 돼지고기와 두부 등을 넣고 끓여 칼칼하고 깊은
-                  맛을 내는 한국의 대표적인 찌개.
-                </p>
-              </div>
-            </article>
+          <article class="food-card">
+            <img src="food/images (3).jfif" alt="쿠킹 클래스 요리 4" />
+            <div class="food-info">
+              <h3>정성 가득한 요리</h3>
+              <p>직접 만들어 더 맛있는 한 접시.</p>
+            </div>
+          </article>
 
-            <!-- 카드 8: 마파두부 -->
-            <article class="food-card">
-              <div class="food-image">
-                <img src="food/images (7).jfif" alt="" />
-              </div>
-              <div class="food-info">
-                <h3>마파두부</h3>
-                <span class="food-country">🇨🇳 중국 · 쓰촨</span>
-                <p>
-                  부드러운 두부와 다진 고기를 매콤한 고추와 향신료 소스에 볶아
-                  만드는 쓰촨 지방의 요리.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-      </main>
-    </div>
+          <article class="food-card">
+            <img src="food/images (4).jfif" alt="쿠킹 클래스 요리 5" />
+            <div class="food-info">
+              <h3>새로운 맛의 발견</h3>
+              <p>다양한 조리법을 경험해 보세요.</p>
+            </div>
+          </article>
 
-    <!-- 모바일 메뉴 열기/닫기 -->
-    <script>
-      const nav = document.querySelector(".nav");
-      const menuBtn = document.querySelector(".menu-btn");
+          <article class="food-card">
+            <img src="food/images (5).jfif" alt="쿠킹 클래스 요리 6" />
+            <div class="food-info">
+              <h3>함께하는 요리 시간</h3>
+              <p>요리의 즐거움을 함께 나눠요.</p>
+            </div>
+          </article>
 
-      menuBtn.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("open");
+          <article class="food-card">
+            <img src="food/images (6).jfif" alt="쿠킹 클래스 요리 7" />
+            <div class="food-info">
+              <h3>홈 쿠킹의 즐거움</h3>
+              <p>일상에서도 활용할 수 있는 요리.</p>
+            </div>
+          </article>
 
-        menuBtn.setAttribute("aria-expanded", isOpen);
-        menuBtn.setAttribute("aria-label", isOpen ? "메뉴 닫기" : "메뉴 열기");
-      });
-    </script>
+          <article class="food-card">
+            <img src="food/images (7).jfif" alt="쿠킹 클래스 요리 8" />
+            <div class="food-info">
+              <h3>나만의 요리 완성</h3>
+              <p>배운 요리를 직접 완성해 보세요.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Chef's studio</p>
+      <p>요리하는 즐거움을 발견하는 공간</p>
+    </footer>
   </body>
 </html>

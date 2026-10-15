@@ -1,155 +1,159 @@
-/* ===== 태블릿: 768px 이하 ===== */
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .class-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px 18px;
+  }
+
+  .food-card > img {
+    height: 190px;
+  }
+}
+
+/* 모바일 */
 @media (max-width: 768px) {
-  header {
+  .header {
     height: 64px;
   }
 
-  header .inner {
+  .header-inner {
     width: 100%;
-    padding: 0 24px;
+    padding: 0 20px;
   }
 
-  header h1 {
+  .logo {
     font-size: 22px;
   }
 
   .nav {
-    gap: 20px;
+    position: static;
+    gap: 10px;
   }
 
-  /* 햄버거 버튼 표시 */
   .menu-btn {
     display: flex;
+    width: 42px;
+    height: 42px;
   }
 
-  /* 메뉴를 헤더 아래로 이동 */
+  .search-btn {
+    width: 40px;
+    height: 42px;
+  }
+
+  /* 기본 상태에서는 메뉴 숨김 */
   .menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 10;
-
+    z-index: 101;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-
-    background: #fff;
-    border-bottom: 1px solid #e5e5e5;
+    padding: 8px 20px;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgb(0 0 0 / 6%);
   }
 
+  /* 햄버거 버튼을 누르면 메뉴 표시 */
   .nav.open .menu {
     display: flex;
   }
 
   .menu a {
-    padding: 16px 24px;
-  }
-
-  /* 메인 영역 */
-  .main-content {
-    width: auto;
-    margin: 0 24px;
-    padding: 36px 0 60px;
-  }
-
-  .intro {
-    margin-bottom: 28px;
-  }
-
-  .intro-text h2 {
-    font-size: 28px;
-  }
-
-  .intro-text p {
+    display: block;
+    padding: 15px 8px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #292929;
     font-size: 15px;
   }
 
-  /* 태블릿: 2열 */
-  .food-grid {
+  .menu a:last-child {
+    border-bottom: 0;
+  }
+
+  .menu a:hover {
+    color: #bd7777;
+  }
+
+  .hero {
+    min-height: 290px;
+    padding: 56px 20px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .classes {
+    width: 90%;
+    padding: 56px 0 64px;
+  }
+
+  .section-heading h2 {
+    font-size: 23px;
+  }
+
+  .class-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px 20px;
+    gap: 20px 14px;
+  }
+
+  .food-card > img {
+    height: 180px;
   }
 
   .food-info {
-    padding: 16px;
+    padding: 12px;
   }
 
   .food-info h3 {
-    font-size: 17px;
+    font-size: 14px;
+  }
+
+  .food-info p {
+    font-size: 12px;
   }
 }
 
-/* ===== 모바일: 390px 이하 ===== */
+/* 작은 모바일 */
 @media (max-width: 390px) {
-  header {
-    height: 56px;
+  .header-inner {
+    padding: 0 12px;
   }
 
-  header .inner {
-    padding: 0 16px;
-  }
-
-  header h1 {
+  .logo {
     font-size: 20px;
   }
 
   .nav {
-    gap: 16px;
+    gap: 4px;
   }
 
-  .menu a {
-    padding: 14px 16px;
+  .hero h1 {
+    font-size: 29px;
   }
 
-  /* 메인 영역 */
-  .main-content {
-    margin: 0 16px;
-    padding: 28px 0 48px;
+  .classes {
+    width: 92%;
   }
 
-  .intro {
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 24px;
+  .class-grid {
+    gap: 16px 10px;
   }
 
-  .intro-text h2 {
-    margin-bottom: 8px;
-    font-size: 24px;
-  }
-
-  .intro-text p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  .filter-btn {
-    width: 38px;
-    height: 38px;
-    padding: 8px;
-  }
-
-  /* 모바일: 1열 */
-  .food-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-  }
-
-  .food-image {
-    aspect-ratio: 4 / 3;
+  .food-card > img {
+    height: 145px;
   }
 
   .food-info {
-    padding: 16px 18px 20px;
+    padding: 10px;
   }
 
   .food-info h3 {
-    font-size: 18px;
-  }
-
-  .food-info p {
-    font-size: 14px;
+    font-size: 13px;
   }
 }

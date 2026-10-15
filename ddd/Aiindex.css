@@ -1,9 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+/* 기본 설정 */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #292929;
+  background-color: #ffffff;
+  font-family: "Inter", "Noto Sans KR", sans-serif;
+  line-height: 1.6;
 }
 
 a {
@@ -11,231 +20,229 @@ a {
   text-decoration: none;
 }
 
-body {
-  font-family: "Inter", "Noto Sans KR", sans-serif;
-  color: #222;
-  background: #fff;
-}
-
 button {
   font: inherit;
 }
 
-.wrap {
-  width: 100%;
-  min-height: 100vh;
+img {
+  display: block;
+  max-width: 100%;
 }
 
-/* ===== 헤더 ===== */
-header {
+/* 헤더 */
+.header {
   position: relative;
-  z-index: 20;
-  height: 80px;
-  background: #ec9f9f;
-  border-bottom: 1px solid #e5e5e5;
+  z-index: 100;
+  width: 100%;
+  height: 82px;
+  background-color: #ec9f9f;
 }
 
-header .inner {
-  width: 90%;
-  max-width: 1200px;
+.header-inner {
+  width: min(1200px, 90%);
   height: 100%;
   margin: 0 auto;
-
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-header h1 {
-  font-size: 24px;
+.logo {
+  flex-shrink: 0;
+  font-size: 25px;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -1px;
 }
 
+/* 내비게이션 */
 .nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 30px;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 36px;
 }
 
-.nav a {
-  font-size: 16px;
+.menu a {
+  font-size: 15px;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.nav a:hover {
-  opacity: 0.6;
+.menu a:hover {
+  color: #ffffff;
 }
 
-.search-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* 검색 버튼 */
+.search-btn,
 .menu-btn {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  background: none;
+  padding: 8px;
   border: 0;
-  color: inherit;
+  background: transparent;
+  color: #292929;
   cursor: pointer;
 }
 
-/* ===== 메인 영역 ===== */
-.main-content {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 52px 0 80px;
-}
-
-/* 소개 영역 */
-.intro {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 36px;
-}
-
-.intro-text h2 {
-  margin-bottom: 12px;
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-}
-
-.intro-text p {
-  color: #777;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* 필터 버튼 */
-.filter-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-
-  width: 44px;
-  height: 44px;
-  padding: 10px;
-
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 12px;
-  cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.filter-btn:hover {
-  background: #f7f7f7;
-  border-color: #ccc;
-}
-
-.filter-btn img {
-  display: block;
-  width: 100%;
-  height: 100%;
+.search-btn img {
+  width: 22px;
+  height: 22px;
   object-fit: contain;
 }
 
-/* ===== 음식 카드 목록 ===== */
-.food-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 32px 24px;
+/* 햄버거 버튼은 모바일에서만 표시 */
+.menu-btn {
+  display: none;
 }
 
-/* 카드 */
+/* 메인 소개 영역 */
+.hero {
+  min-height: 340px;
+  padding: 72px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff5f1;
+}
+
+.hero-inner {
+  max-width: 760px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #bd7777;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.3;
+  letter-spacing: -1.5px;
+}
+
+.hero-description {
+  margin: 18px 0 28px;
+  color: #666666;
+  font-size: 15px;
+}
+
+.hero-link {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  background-color: #ec9f9f;
+  color: #292929;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hero-link:hover {
+  background-color: #d98787;
+  color: #ffffff;
+}
+
+/* 클래스 목록 */
+.classes {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 76px 0 90px;
+}
+
+.section-heading {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.section-heading > p:last-child {
+  margin: 12px 0 0;
+  color: #777777;
+  font-size: 14px;
+}
+
+/* 음식 카드 */
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 22px;
+}
+
 .food-card {
   min-width: 0;
   overflow: hidden;
-  background: #f0e6b2;
-  border: 1px solid #ededed;
-  border-radius: 16px;
-
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  background-color: #ffffff;
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .food-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgb(0 0 0 / 7%);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 8%);
 }
 
-/* 사진이 들어갈 빈 공간 */
-/* .food-image {
+.food-card > img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  background: #f2f2f2;
-  overflow: hidden;
-} */
+  height: 210px;
+  object-fit: cover;
+}
 
-/* 음식 이름, 국가, 소개 */
 .food-info {
-  padding: 18px 18px 22px;
+  padding: 16px;
 }
 
 .food-info h3 {
-  min-height: 25px;
-  margin-bottom: 8px;
-  font-size: 18px;
+  margin: 0 0 8px;
+  color: #383838;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.4;
-  overflow-wrap: anywhere;
-}
-
-.food-country {
-  display: inline-block;
-  min-height: 22px;
-  margin-bottom: 10px;
-  color: #575757;
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: bold;
 }
 
 .food-info p {
-  min-height: 44px;
-  color: #666;
-  font-size: 14px;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
+  margin: 0;
+  color: #777777;
+  font-size: 13px;
 }
 
-/* 음식 사진을 카드 영역에 꽉 맞추기 */
-.food-image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background-color: #f2f2f2;
+/* 하단 */
+.footer {
+  padding: 32px 5%;
+  background-color: #292929;
+  color: #ffffff;
+  text-align: center;
 }
 
-.food-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.footer p {
+  margin: 4px 0;
 }
 
-/* 음식 이름 */
-.food-info h3 {
-  color: #a6533c;
+.footer p:first-child {
+  font-size: 18px;
   font-weight: 700;
+}
+
+.footer p:last-child {
+  color: #cccccc;
+  font-size: 12px;
 }
